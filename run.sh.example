@@ -1,0 +1,11 @@
+. env/bin/activate
+export PUSHBULLET_API=000000000000000000000000000000000000000000000
+export PUSHBULLET_DEVICE=0000000000000000
+export XMPP_USERNAME=user@example.com/jabbullet
+export XMPP_PASSWORD=p@ssword
+export XMPP_MUC_NICKNAME=TheUser
+export XMPP_MUC_ROOMS=general,secret_den
+export XMPP_MUC_DOMAIN=conference.example.com
+export TARGETS=theuser,user,thatguy
+
+python jabbullet.py

@@ -4,6 +4,7 @@ import pushbullet
 import os
 import time
 import logging
+import sys
 
 log = logging.getLogger(__name__)
 
@@ -86,7 +87,6 @@ def xmpp_connect(config):
 
     if not bot.connect():
         raise 'could not connect'
-    bot.process()
 
     return bot
 
@@ -96,6 +96,5 @@ if __name__ == '__main__':
     config = get_config()
     bot = xmpp_connect(config)
 
-    while True: time.sleep(1)
-
+    bot.process(block=True)
 

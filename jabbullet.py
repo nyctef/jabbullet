@@ -80,6 +80,8 @@ def xmpp_connect(config):
     ping = bot.plugin['xep_0199']
     ping.enable_keepalive(30, 30)
 
+    bot.use_ipv6 = False
+
     bot.add_event_handler('session_start',
             join_rooms_on_connect_handler(bot, muc, config.muc_domain,
                 config.chats, config.nickname))
